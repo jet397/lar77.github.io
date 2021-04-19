@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <div class="container">
+        <h1 style="color:rgb(32, 188, 209);">welcome to the random task generator! </h1>
+        <h1 style="color:rgb(32, 188, 209);">only for extra bored people</h1>
+        <h1 style="color:#20bcd1;">like You!</h1>
+        <button id="btn">generate a task</button>
+        <p id="demo"></p>
+
+    </div>
+    <div id="myRandomDiv" >
+    </div>
+
+    <script type="text/javascript" charset="utf-8">
+        var randomStrings = [
+            "hello 1",
+            "hello 2",
+            "hello 3", 
+            "hello 4",
+            "hello 5",
+        ];
+        
+        var randomDiv = document.getElementById("myRandomDiv");
+
+        document.getElementById("btn").addEventListener("click", function() {
+          randomIndex = Math.ceil((Math.random()*randomStrings.length-1));
+          newText = randomStrings[randomIndex];
+          randomDiv.innerHTML = newText;
+    });
+        
+        </script>
+</body>
+</html>
